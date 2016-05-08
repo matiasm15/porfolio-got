@@ -1,0 +1,19 @@
+.triangulo {
+  right: 224px;
+}
+
+.region {
+  display: flex;
+  justify-content: center; /* align horizontal */
+  align-items: center; /* align vertical */
+}
+
+.region img {
+  width: 30%;
+  height: 10%;
+  display: inline;
+}
+
+.region .descripcion p {
+  margin: 10px 0px 10px 30px;
+}
