@@ -6,7 +6,7 @@
   <meta name="author" content="Matías Mangiantini">
   <meta name="description" content="Sitio web de información sobre Los 7 Reinos.">
   <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
-  <link rel="stylesheet" type="text/css" href="styles/normalize.css">
+  <link rel="stylesheet" type="text/css" href="styles/normalize.min.css">
   <link rel="stylesheet" type="text/css" href="styles/general.css">
   <link rel="stylesheet" type="text/css" href="styles/contacto.css">
 </head>
@@ -34,20 +34,57 @@
     <div class="triangulo"></div>
 
     <section>
+      <img src="./img/contacto/tommen-baratheon.jpg" alt="Tommen Baratheon">
       <div class="descripcion">
         <p>
           Tommen Baratheon es el actual Rey de los Siete Reinos desde 300 AC. El título oficial del rey es "Su Alteza Tommen de las Casas Baratheon y Lannister, el primero de su nombre, rey de los Ándalos y los Rhoynar y los Primeros Hombres, señor de los Siete Reinos y Protector del Reino."
         </p>
         <p>
-          El símbolo del poder del monarca es el Trono de Hierro, cuya dirección es:
+          El Rey ofrece las siguientes formas de que el pueblo le haga llegar sus inquietudes:
         </p>
-        <address>
-          Trono de Hierro<br>
-          Sala del Trono, Fortaleza Roja<br>
-          Cima de la Colina Alta de Aegon<br>
-          Desembarco del Rey<br>
-          Los Siete Reinos
-        </address>
+
+        <div class="desplegable">
+          <input type="checkbox" id="desplegable-1"></input>
+          <label for="desplegable-1">
+            <span>&#x226B</span> Audiencias públicas
+          </label>
+          <div class="oculto">
+            <p>
+              Durante las audiencias públicas el Rey escucha los reclamos de su pueblo y si lo cree necesario puede anunciar medidas para solucionar los conflictos. Estas se realizan periódicamente en:
+            </p>
+            <address>
+              Trono de Hierro<br>
+              Sala del Trono, Fortaleza Roja<br>
+              Cima de la Colina Alta de Aegon<br>
+              Desembarco del Rey<br>
+              Los Siete Reinos
+            </address>
+          </div>
+        </div>
+
+        <div class="desplegable">
+          <input type="checkbox" id="desplegable-2"></input>
+          <label for="desplegable-2">
+            <span>&#x226B</span> A través de su Señor
+          </label>
+          <div class="oculto">
+            <p>
+              Puede acercar su reclamo al Señor de su comunidad. Este se encargará de escribir una carta y enviarla al Trono de Hierro.
+            </p>
+          </div>
+        </div>
+
+        <div class="desplegable">
+          <input type="checkbox" id="desplegable-3"></input>
+          <label for="desplegable-3">
+            <span>&#x226B</span> Correo electrónico
+          </label>
+          <div class="oculto">
+            <p>
+              Si sabe leer y escribir puede enviar su reclamo a <a href="mailto:trono_de_hierro@poniente.org">trono_de_hierro@poniente.org</a>. <strong>Por orden del Rey quien mande spam será penado con la muerte.</strong>
+            </p>
+          </div>
+        </div>
       </div>
     </section>
   </main>

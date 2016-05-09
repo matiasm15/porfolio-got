@@ -2,6 +2,50 @@
   right: 51px;
 }
 
-section address {
-  margin: 0px 40px;
+section {
+  display: flex;
+  justify-content: center; /* align horizontal */
+}
+
+section img {
+  width: 30%;
+  height: 100%;
+}
+
+.descripcion {
+  margin: 10px 0px 10px 30px;
+}
+
+.desplegable input {
+  display: none;
+}
+
+.desplegable label {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.desplegable .oculto {
+  overflow: hidden;
+  height: 0;
+  opacity: 0;
+}
+
+.desplegable input:checked ~ label span {
+  display: inline-block;
+  transform: rotate(90deg);
+}
+
+.desplegable input:checked ~ .oculto {
+  height: auto;
+  opacity: 1;
+  margin: 5px 23px;
+}
+
+.desplegable input:checked ~ .oculto p {
+  margin: 0px;
+}
+
+.desplegable input:checked ~ .oculto address {
+  margin: 5px 10px;
 }
