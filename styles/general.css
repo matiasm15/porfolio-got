@@ -30,21 +30,17 @@ header nav {
 }
 
 header ul {
-  display: flex;
-  justify-content: space-between;
   padding: 0px;
   margin: 0px 25px 0px 0px;
   height: 100%;
 }
 
 header li {
-  display: flex;
+  display: inline-flex;
   justify-content: center;
-  align-content: center;
   flex-direction: column;
   padding: 0px 15px;
   height: 100%;
-  position: relative;
 }
 
 header a {

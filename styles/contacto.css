@@ -2,18 +2,28 @@
   right: 51px;
 }
 
-section {
+.post {
   display: flex;
-  justify-content: center; /* align horizontal */
+  justify-content: center;
 }
 
-section img {
+.post img {
+  margin: 10px 0px 10px 10px;
   width: 30%;
   height: 100%;
 }
 
+/* Igualo margin-left de .descripcion con padding-right de .post (2% del 100% es igual al 2.35% del 85%). */
 .descripcion {
-  margin: 10px 0px 10px 30px;
+  margin: 10px 0px 10px 2.35%;
+}
+
+.descripcion p:first-child {
+  margin-top: 0px;
+}
+
+.descripcion > * {
+  margin: 16px 10px;
 }
 
 .desplegable input {

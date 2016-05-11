@@ -1,5 +1,5 @@
 .triangulo {
-  right: 224px;
+  right: 233px;
 }
 
 .region {
@@ -11,9 +11,13 @@
 .region img {
   width: 30%;
   height: 10%;
-  display: inline;
+}
+
+/* Igualo margin-left de .descripcion con padding-right de .region (2% del 100% es igual al 2.35% del 85%). */
+.descripcion {
+  margin-left: 2.35%;
 }
 
 .descripcion p {
-  margin: 10px 0px 10px 30px;
+  margin: 10px 0px 10px;
 }
