@@ -10,20 +10,21 @@
 .post img {
   margin: 10px 0px 10px 10px;
   width: 30%;
+  min-width: 30%; /* Necesario para que se vea bien en Firefox */
   height: 100%;
 }
 
-/* Igualo margin-left de .descripcion con padding-right de .post (2% del 100% es igual al 2.35% del 85%). */
 .descripcion {
-  margin: 10px 0px 10px 2.35%;
+  margin: 10px 0px 10px 2.35%; /* Igualo margin-left de .descripcion con padding-right de .post */
+  padding: 0px 10px;
 }
 
 .descripcion p:first-child {
   margin-top: 0px;
 }
 
-.descripcion > * {
-  margin: 16px 10px;
+.desplegable {
+  margin: 16px 0px;
 }
 
 .desplegable input {
