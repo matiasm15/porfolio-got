@@ -10,13 +10,12 @@
 
 .region img {
   width: 30%;
-  min-width: 30%;
+  min-width: 30%; /* Necesario para que se vea bien en Firefox */
   height: 10%;
 }
 
-/* Igualo margin-left de .descripcion con padding-right de .region (2% del 100% es igual al 2.35% del 85%). */
 .descripcion {
-  margin-left: 2.35%;
+  margin-left: 2.35%; /* Igualo margin-left de .descripcion con padding-right de .region */
 }
 
 .descripcion p {
