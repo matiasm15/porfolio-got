@@ -15,7 +15,7 @@
 }
 
 .descripcion {
-  margin: 10px 0px 10px 2.35%; /* Igualo margin-left de .descripcion con padding-right de .post */
+  margin: 10px 0px 10px 2vw; /* Igualo margin-left de .descripcion con padding-right de .post */
   padding: 0px 10px;
 }
 
@@ -62,7 +62,7 @@
   margin: 0px 10px;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 800px) {
   .triangulo {
     right: calc(16.655% - 26px);
   }
@@ -75,7 +75,7 @@
     margin: 0px auto;
     width: 100%;
     object-fit: cover;
-    height: 90vw; /* vw: viewport width */
+    height: 90vw;
   }
 
   .descripcion {

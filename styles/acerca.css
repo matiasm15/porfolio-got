@@ -19,7 +19,7 @@
   text-align: center;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 800px) {
   .triangulo {
     right: calc(50% - 26px);
   }

@@ -15,14 +15,14 @@
 }
 
 .descripcion {
-  margin-left: 2.35%; /* Igualo margin-left de .descripcion con padding-right de .region */
+  margin-left: 2vw; /* Igualo margin-left de .descripcion con padding-right de .region */
 }
 
 .descripcion p {
   padding: 0px;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 800px) {
   .triangulo {
     right: calc(83.325% - 26px);
   }
@@ -41,6 +41,6 @@
   }
 
   .descripcion p {
-    margin: 3.191% 0% 0%;
+    margin: 3vw 0vw 0vw;
   }
 }
