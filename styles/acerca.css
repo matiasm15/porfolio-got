@@ -10,7 +10,36 @@
   margin: 0% 2%;
 }
 
+.descripcion p:last-child {
+  padding-bottom: 0px;
+}
+
 .video {
   padding-top: 2.5%;
   text-align: center;
+}
+
+@media (max-width: 1000px) {
+  .triangulo {
+    right: calc(50% - 26px);
+  }
+
+  .video {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0px;
+    margin-bottom: 9px;
+  }
+  .video iframe {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+  }
+
+  .descripcion {
+    margin: 0%;
+  }
 }

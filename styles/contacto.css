@@ -20,11 +20,16 @@
 }
 
 .descripcion p:first-child {
-  margin-top: 0px;
+  padding-top: 0px;
+}
+
+.descripcion p:last-child, .descripcion .desplegable:last-child {
+  padding-bottom: 0px;
 }
 
 .desplegable {
-  margin: 16px 0px;
+  margin: 0px;
+  padding: 9px 0px 9px;
 }
 
 .desplegable input {
@@ -38,7 +43,7 @@
 
 .desplegable .oculto {
   overflow: hidden;
-  height: 0;
+  height: 0px;
   opacity: 0;
 }
 
@@ -50,13 +55,39 @@
 .desplegable input:checked ~ .oculto {
   height: auto;
   opacity: 1;
-  margin: 5px 23px;
-}
-
-.desplegable input:checked ~ .oculto p {
-  margin: 0px;
+  margin: 4.5px 23px 0px;
 }
 
 .desplegable input:checked ~ .oculto address {
-  margin: 5px 10px;
+  margin: 0px 10px;
+}
+
+@media (max-width: 1000px) {
+  .triangulo {
+    right: calc(16.655% - 26px);
+  }
+
+  .post {
+    flex-direction: column;
+  }
+
+  .post img {
+    margin: 0px auto;
+    width: 100%;
+    object-fit: cover;
+    height: 90vw; /* vw: viewport width */
+  }
+
+  .descripcion {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .descripcion > p:first-child {
+    padding-top: 9px;
+  }
+
+  .descripcion .desplegable:last-child {
+    padding-bottom: 9px;
+  }
 }

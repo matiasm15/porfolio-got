@@ -19,5 +19,28 @@
 }
 
 .descripcion p {
-  margin: 10px 0px 10px;
+  padding: 0px;
+}
+
+@media (max-width: 1000px) {
+  .triangulo {
+    right: calc(83.325% - 26px);
+  }
+
+  .region {
+    align-items: initial;
+    flex-direction: column;
+  }
+
+  .region img {
+    width: 100%;
+  }
+
+  .descripcion {
+    margin-left: 0%;
+  }
+
+  .descripcion p {
+    margin: 3.191% 0% 0%;
+  }
 }
