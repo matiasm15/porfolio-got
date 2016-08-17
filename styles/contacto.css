@@ -8,28 +8,29 @@
 }
 
 .post img {
-  margin: 10px 0px 10px 10px;
+  margin: 10px 0 10px 10px;
   width: 30%;
   min-width: 30%; /* Necesario para que se vea bien en Firefox */
   height: 100%;
 }
 
 .descripcion {
-  margin: 10px 0px 10px 2vw; /* Igualo margin-left de .descripcion con padding-right de .post */
-  padding: 0px 10px;
+  margin: 10px 0 10px 2vw;
+  padding: 0 10px;
 }
 
 .descripcion p:first-child {
-  padding-top: 0px;
+  padding-top: 0;
 }
 
-.descripcion p:last-child, .descripcion .desplegable:last-child {
-  padding-bottom: 0px;
+.descripcion p:last-child,
+.descripcion .desplegable:last-child {
+  padding-bottom: 0;
 }
 
 .desplegable {
-  margin: 0px;
-  padding: 9px 0px 9px;
+  margin: 0;
+  padding: 9px 0 9px;
 }
 
 .desplegable input {
@@ -43,7 +44,7 @@
 
 .desplegable .oculto {
   overflow: hidden;
-  height: 0px;
+  height: 0;
   opacity: 0;
 }
 
@@ -55,11 +56,11 @@
 .desplegable input:checked ~ .oculto {
   height: auto;
   opacity: 1;
-  margin: 4.5px 23px 0px;
+  margin: 4.5px 23px 0;
 }
 
 .desplegable input:checked ~ .oculto address {
-  margin: 0px 10px;
+  margin: 0 10px;
 }
 
 @media (max-width: 800px) {
@@ -72,15 +73,15 @@
   }
 
   .post img {
-    margin: 0px auto;
+    margin: 0 auto;
     width: 100%;
     object-fit: cover;
     height: 85vw;
   }
 
   .descripcion {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
   }
 
   .descripcion > p:first-child {

@@ -15,11 +15,11 @@
 }
 
 .descripcion {
-  margin-left: 2vw; /* Igualo margin-left de .descripcion con padding-right de .region */
+  margin-left: 2vw;
 }
 
 .descripcion p {
-  padding: 0px;
+  padding: 0;
 }
 
 @media (max-width: 800px) {
@@ -37,10 +37,10 @@
   }
 
   .descripcion {
-    margin-left: 0%;
+    margin-left: 0;
   }
 
   .descripcion p {
-    margin: 3vw 0vw 0vw;
+    margin: 3vw 0 0;
   }
 }
