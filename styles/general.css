@@ -58,18 +58,19 @@ header .activo a {
   z-index: 5;
 }
 
-.triangulo {
+#triangulo {
   position: absolute;
   top: 88px;
   border: 26px solid transparent;
   border-top-color: #1B2025;
+  visibility: hidden;
 }
 
 main {
   margin: 150px 0 126px;
 }
 
-section {
+section:not(#contenido) {
   width: 85%;
   background-color: #89C5C3;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -135,7 +136,7 @@ footer .social img {
     text-align: center;
   }
 
-  .triangulo {
+  #triangulo {
     top: 100px;
   }
 

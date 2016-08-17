@@ -1,106 +1,55 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <title>Contacto - Game of Thrones</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width">
-  <meta name="author" content="Matías Mangiantini">
-  <meta name="description" content="Sitio web de información sobre Los 7 Reinos.">
-  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
-  <link rel="stylesheet" type="text/css" href="styles/normalize.min.css">
-  <link rel="stylesheet" type="text/css" href="styles/general.css">
-  <link rel="stylesheet" type="text/css" href="styles/contacto.css">
-</head>
+<section class="post">
+  <img src="./img/contacto/tommen-baratheon.jpg" alt="Tommen Baratheon">
 
-<body>
-  <header>
-    <img src="./img/logo.svg" id="logo" alt="Logo">
+  <div class="descripcion">
+    <p>
+      Tommen Baratheon es el actual Rey de los Siete Reinos desde 300 AC. El título oficial del rey es "Su Alteza Tommen de las Casas Baratheon y Lannister, el primero de su nombre, rey de los Ándalos y los Rhoynar y los Primeros Hombres, señor de los Siete Reinos y Protector del Reino."
+    </p>
+    <p>
+      El Rey ofrece las siguientes formas de que el pueblo le haga llegar sus inquietudes:
+    </p>
 
-    <nav>
-      <ul>
-        <li id="index">
-          <a href="index.html">Inicio</a>
-        </li>
-        <li id="acerca">
-          <a href="acerca.html">Acerca</a>
-        </li>
-        <li id="contacto" class="activo">
-          <a href="contacto.html">Contacto</a>
-        </li>
-      </ul>
-    </nav>
-  </header>
-
-  <main>
-    <div class="triangulo"></div>
-
-    <section class="post">
-      <img src="./img/contacto/tommen-baratheon.jpg" alt="Tommen Baratheon">
-
-      <div class="descripcion">
+    <div class="desplegable">
+      <input type="checkbox" id="desplegable-1">
+      <label for="desplegable-1">
+        <span>&#x226B;</span> Audiencias públicas
+      </label>
+      <div class="oculto">
         <p>
-          Tommen Baratheon es el actual Rey de los Siete Reinos desde 300 AC. El título oficial del rey es "Su Alteza Tommen de las Casas Baratheon y Lannister, el primero de su nombre, rey de los Ándalos y los Rhoynar y los Primeros Hombres, señor de los Siete Reinos y Protector del Reino."
+          Durante las audiencias públicas el Rey escucha los reclamos de su pueblo y si lo cree necesario puede anunciar medidas para solucionar los conflictos. Estas se realizan periódicamente en:
         </p>
-        <p>
-          El Rey ofrece las siguientes formas de que el pueblo le haga llegar sus inquietudes:
-        </p>
-
-        <div class="desplegable">
-          <input type="checkbox" id="desplegable-1">
-          <label for="desplegable-1">
-            <span>&#x226B;</span> Audiencias públicas
-          </label>
-          <div class="oculto">
-            <p>
-              Durante las audiencias públicas el Rey escucha los reclamos de su pueblo y si lo cree necesario puede anunciar medidas para solucionar los conflictos. Estas se realizan periódicamente en:
-            </p>
-            <address>
-              Trono de Hierro<br>
-              Sala del Trono, Fortaleza Roja<br>
-              Cima de la Colina Alta de Aegon<br>
-              Desembarco del Rey<br>
-              Los Siete Reinos
-            </address>
-          </div>
-        </div>
-
-        <div class="desplegable">
-          <input type="checkbox" id="desplegable-2">
-          <label for="desplegable-2">
-            <span>&#x226B;</span> A través de su Señor
-          </label>
-          <div class="oculto">
-            <p>
-              Puede acercar su reclamo al Señor de su comunidad. Este se encargará de escribir una carta y enviarla al Trono de Hierro.
-            </p>
-          </div>
-        </div>
-
-        <div class="desplegable">
-          <input type="checkbox" id="desplegable-3">
-          <label for="desplegable-3">
-            <span>&#x226B;</span> Correo electrónico
-          </label>
-          <div class="oculto">
-            <p>
-              Si sabe leer y escribir puede enviar su reclamo a <a href="mailto:trono_de_hierro@poniente.org">trono_de_hierro@poniente.org</a>. <strong>Por orden del Rey quien mande spam será penado con la muerte.</strong>
-            </p>
-          </div>
-        </div>
+        <address>
+          Trono de Hierro<br>
+          Sala del Trono, Fortaleza Roja<br>
+          Cima de la Colina Alta de Aegon<br>
+          Desembarco del Rey<br>
+          Los Siete Reinos
+        </address>
       </div>
-    </section>
-  </main>
+    </div>
 
-  <footer>
-    <a href="https://www.facebook.com/GameOfThrones/" class="social">
-      <img src="./img/social/facebook.svg" alt="Facebook" >
-    </a>
-    <a href="https://twitter.com/GameOfThrones" class="social">
-      <img src="./img/social/twitter.svg" alt="Twitter" >
-    </a>
-    <a href="https://www.youtube.com/user/GameofThrones" class="social">
-      <img src="./img/social/youtube.svg" alt="Youtube">
-    </a>
-  </footer>
-</body>
-</html>
+    <div class="desplegable">
+      <input type="checkbox" id="desplegable-2">
+      <label for="desplegable-2">
+        <span>&#x226B;</span> A través de su Señor
+      </label>
+      <div class="oculto">
+        <p>
+          Puede acercar su reclamo al Señor de su comunidad. Este se encargará de escribir una carta y enviarla al Trono de Hierro.
+        </p>
+      </div>
+    </div>
+
+    <div class="desplegable">
+      <input type="checkbox" id="desplegable-3">
+      <label for="desplegable-3">
+        <span>&#x226B;</span> Correo electrónico
+      </label>
+      <div class="oculto">
+        <p>
+          Si sabe leer y escribir puede enviar su reclamo a <a href="mailto:trono_de_hierro@poniente.org">trono_de_hierro@poniente.org</a>. <strong>Por orden del Rey quien mande spam será penado con la muerte.</strong>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

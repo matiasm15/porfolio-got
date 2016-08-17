@@ -1,7 +1,3 @@
-.triangulo {
-  right: 233px;
-}
-
 .region {
   display: flex;
   justify-content: center; /* align horizontal */
@@ -23,10 +19,6 @@
 }
 
 @media (max-width: 800px) {
-  .triangulo {
-    right: calc(83.325% - 26px);
-  }
-
   .region {
     align-items: initial;
     flex-direction: column;

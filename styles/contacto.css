@@ -1,7 +1,3 @@
-.triangulo {
-  right: 51px;
-}
-
 .post {
   display: flex;
   justify-content: center;
@@ -64,10 +60,6 @@
 }
 
 @media (max-width: 800px) {
-  .triangulo {
-    right: calc(16.655% - 26px);
-  }
-
   .post {
     flex-direction: column;
   }
