@@ -1,26 +1,24 @@
 /* Carga el CSS de la sección. */
 function cargarCSS(seccion) {
-  var oldStyle = document.getElementById('seccion-css');
+  var viejoCSS = document.getElementById('seccion-css');
 
-  var newStyle = document.createElement('link');
-  newStyle.setAttribute('id', 'seccion-css');
-  newStyle.setAttribute('type', 'text/css');
-  newStyle.setAttribute('rel', 'stylesheet');
-  newStyle.setAttribute('href', 'styles/' + seccion + '.css')
+  if (viejoCSS != undefined) {
+    document.head.removeChild(viejoCSS);
+  }
 
-  /* Cuando se termina de cargar el CSS de la nueva sección, elimina el de la sección anterior. */
-  newStyle.addEventListener('load', function() {
-    if (oldStyle != undefined) {
-      document.head.removeChild(oldStyle);
-    }
-  });
+  var nuevoCSS = document.createElement('link');
 
-  document.head.appendChild(newStyle);
+  nuevoCSS.setAttribute('id', 'seccion-css');
+  nuevoCSS.setAttribute('type', 'text/css');
+  nuevoCSS.setAttribute('rel', 'stylesheet');
+  nuevoCSS.setAttribute('href', 'styles/' + seccion + '.css');
+
+  return document.head.appendChild(nuevoCSS);
 }
 
 /* Activa el link de la sección en el menú. */
 function cargarMenu(seccion) {
-  var menuItems = document.querySelectorAll('nav li');
+  var menuItems = document.querySelectorAll('#menu li');
 
   for (var i = 0; i < menuItems.length; i++) {
     menuItems[i].setAttribute('class', '');
@@ -57,17 +55,26 @@ function cargarSeccion(seccion) {
   peticion.addEventListener('readystatechange', function() {
     if (this.readyState == 4) {
       if (this.status == 200) {
+        var contenido = document.getElementById('contenido');
+
+        /* Oculta el contenido de la página hasta que se encuentre completamente cargada. */
+        contenido.style.visibility = 'hidden';
+
+        cargarTitulo(seccion);
         cargarMenu(seccion);
         cargarTriangulo(seccion);
-        cargarCSS(seccion);
-        cargarTitulo(seccion);
 
-        document.getElementById('contenido').innerHTML = this.responseText;
+        contenido.innerHTML = this.responseText;
+
+        /* Vuelve a mostrar el contenido cuando se termina de cargar el CSS. */
+        cargarCSS(seccion).addEventListener('load', function() {
+          contenido.style.visibility = 'visible';
+        });
       }
     }
   });
 
-  peticion.open('POST', seccion + '.html', true);
+  peticion.open('GET', seccion + '.html', true);
 
   peticion.send();
 }
