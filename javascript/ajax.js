@@ -24,7 +24,7 @@ function cargarMenu(seccion) {
     menuItems[i].setAttribute('class', '');
   }
 
-  document.getElementById(seccion).setAttribute('class', 'activo');
+  document.getElementById(seccion + '-li').setAttribute('class', 'activo');
 }
 
 /* Mueve el triangulo abajo del link de la sección en el menú. */
@@ -33,7 +33,7 @@ function cargarTriangulo(seccion) {
 
   var trianguloElem = document.getElementById('triangulo');
 
-  var seccionElem = document.getElementById(seccion);
+  var seccionElem = document.getElementById(seccion + '-li');
   var seccionRect = seccionElem.getBoundingClientRect();
 
   var base = bodyRect.right - seccionRect.right;
@@ -55,20 +55,19 @@ function cargarSeccion(seccion) {
   peticion.addEventListener('readystatechange', function() {
     if (this.readyState == 4) {
       if (this.status == 200) {
+        var responseText = this.responseText;
+
         var contenido = document.getElementById('contenido');
 
-        /* Oculta el contenido de la página hasta que se encuentre completamente cargada. */
-        contenido.style.visibility = 'hidden';
+        contenido.innerHTML = '';
 
         cargarTitulo(seccion);
         cargarMenu(seccion);
         cargarTriangulo(seccion);
 
-        contenido.innerHTML = this.responseText;
-
-        /* Vuelve a mostrar el contenido cuando se termina de cargar el CSS. */
+        /* Muestra el contenido cuando se termina de cargar el CSS. */
         cargarCSS(seccion).addEventListener('load', function() {
-          contenido.style.visibility = 'visible';
+          contenido.innerHTML = responseText;
         });
       }
     }

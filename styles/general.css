@@ -140,7 +140,7 @@ footer .social img {
     top: 100px;
   }
 
-  section {
+  section:not(#contenido) {
     margin: 4.5% auto;
     padding: 3vw;
   }
