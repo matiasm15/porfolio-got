@@ -29,33 +29,29 @@
   padding: 9px 0 9px;
 }
 
-.desplegable input {
-  display: none;
-}
-
-.desplegable label {
+.desplegable .desplegable-title {
   font-weight: bold;
   cursor: pointer;
 }
 
-.desplegable .oculto {
+.desplegable .desplegable-title.desplegado span {
+  display: inline-block;
+  transform: rotate(90deg);
+}
+
+.desplegable .desplegable-body.oculto {
   overflow: hidden;
   height: 0;
   opacity: 0;
 }
 
-.desplegable input:checked ~ label span {
-  display: inline-block;
-  transform: rotate(90deg);
-}
-
-.desplegable input:checked ~ .oculto {
+.desplegable .desplegable-body.visible {
   height: auto;
   opacity: 1;
   margin: 4.5px 23px 0;
 }
 
-.desplegable input:checked ~ .oculto address {
+.desplegable .desplegable-body.visible address {
   margin: 0 10px;
 }
 

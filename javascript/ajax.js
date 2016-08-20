@@ -1,3 +1,24 @@
+/* Carga el JS de la sección. */
+function cargarJS() {
+  var script = document.querySelector('#contenido script');
+
+  if (script != undefined) {
+    var peticion = new XMLHttpRequest();
+
+    peticion.addEventListener('readystatechange', function() {
+      if (this.readyState == XMLHttpRequest.DONE) {
+        if (this.status == 200) {
+          eval(this.responseText);
+        }
+      }
+    });
+
+    peticion.open('GET', script.src, true);
+
+    peticion.send();
+  }
+}
+
 /* Carga el CSS de la sección. */
 function cargarCSS(seccion) {
   var viejoCSS = document.getElementById('seccion-css');
@@ -53,7 +74,7 @@ function cargarSeccion(seccion) {
   var peticion = new XMLHttpRequest();
 
   peticion.addEventListener('readystatechange', function() {
-    if (this.readyState == 4) {
+    if (this.readyState == XMLHttpRequest.DONE) {
       if (this.status == 200) {
         var responseText = this.responseText;
 
@@ -68,6 +89,7 @@ function cargarSeccion(seccion) {
         /* Muestra el contenido cuando se termina de cargar el CSS. */
         cargarCSS(seccion).addEventListener('load', function() {
           contenido.innerHTML = responseText;
+          cargarJS();
         });
       }
     }
